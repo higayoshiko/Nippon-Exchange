@@ -98,6 +98,7 @@ function getAmount(value, acronym) {
 
     case 'PHP':
       result = (value / phpBuy).toFixed(2);
+      showResult();
       break;
 
     case 'THB':

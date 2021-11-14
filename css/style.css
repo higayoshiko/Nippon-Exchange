@@ -191,7 +191,8 @@ Main Nav-bar Styles
 }
 
 .logo-img {
-  height: 12.8rem;
+  height: 9.6rem;
+  margin-top: 2rem;
 }
 
 .main-nav-list {
@@ -218,11 +219,31 @@ Main Nav-bar Styles
   border-bottom: .5rem solid #F6D7A7;
 }
 
+/* burger/mobile navigation */
+
+.nav-burger {
+  display: none;
+  border: none;
+  background-color: #fff;
+  cursor: pointer;
+}
+
+.nav-icon {
+  height: 5.2rem;
+  width: 5.2rem;
+  color: #212121;
+}
+
+.nav-icon[name="close-outline"] {
+  display: none;
+}
+
 /******************
 Header Styles
 *******************/
 .header {
-  height: 95vh;
+  /* height: 95vh; */
+  padding: 6.4rem;
   background-image: linear-gradient(rgba(250, 250, 250, 0.8) 0%,
       rgba(255, 243, 204, 0.8) 50%,
       rgba(255, 230, 153, 0.8) 100%),
@@ -231,9 +252,13 @@ Header Styles
 }
 
 .header-grid {
+  max-width: 120rem;
+  padding: 3.2rem;
+
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 9.6rem;
-  margin-top: 9.6rem;
+  /* margin-top: 6.4rem; */
+  margin: 12.8rem auto;
 }
 
 .converter-ctn {
@@ -248,6 +273,7 @@ Header Styles
   font-size: 1.6rem;
   font-weight: 500;
   margin-bottom: 1.2rem;
+  text-align: left;
 }
 
 .converter-input {
@@ -261,7 +287,10 @@ Header Styles
   display: flex;
   gap: 2.4rem;
   align-items: center;
+  justify-content: center;
   margin: 4.8rem 0;
+
+  /* flex-wrap: wrap; */
 }
 
 .converter-icon {
@@ -393,6 +422,17 @@ Table Styles
   text-transform: uppercase;
 }
 
+.currencies span {
+  vertical-align: middle;
+}
+
+.currencies img {
+  height: 3.6rem;
+  width: 5.6rem;
+  margin-right: 2rem;
+  vertical-align: middle;
+}
+
 thead tr {
   background-color: #FFE699;
 }
@@ -441,7 +481,7 @@ Register Styles
 
 .register-form {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: repeat(2, 1fr);
   grid-column-gap: 3rem;
   grid-row-gap: 2rem;
   margin-top: 6.4rem;
@@ -469,6 +509,7 @@ Register Styles
       rgba(255, 230, 153, 0.5)),
     url(../css/img/send.jpg);
   background-size: cover;
+  background-position: center;
   border-radius: .5rem;
 }
 
@@ -517,7 +558,8 @@ Footer Styles
 }
 
 .footer-logo {
-  height: 12.8rem;
+  height: 6rem;
+  margin-bottom: 2.4rem;
 }
 
 .footer-icon-ctn a {
@@ -540,11 +582,17 @@ Footer Styles
 }
 
 .footer-text-ctn {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  grid-column-gap: 9.6rem;
+}
+
+/* .footer-text-ctn {
   display: flex;
   gap: 9.6rem;
   justify-content: center;
   align-items: flex-start;
-}
+} */
 
 .footer-title {
   color: #5e5e5e;

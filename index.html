@@ -4,10 +4,19 @@
 <head>
   <meta charset="utf-8">
 
+  <meta name="description" content="Nippon exchange provides money conversion and online transfer services in Japan">
+
+  <!-- important! for responsive design -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+
   <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="/css/queries.css">
+
+  <!-- icons -->
   <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
   <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
 
@@ -26,9 +35,14 @@
         <li class="main-nav-item"><a href="#" class="main-nav-link link-log">Log in</a></li>
         <li class="main-nav-item"><a href="#register" class="main-nav-link link-cta">Register Now</a></li>
       </ul>
+
+      <button class="nav-burger">
+        <ion-icon class="nav-icon" name="menu-outline"></ion-icon>
+        <ion-icon class="nav-icon" name="close-outline"></ion-icon>
+      </button>
     </nav>
 
-    <div class="container grid header-grid">
+    <div class="grid header-grid">
       <div class="header-text-ctn">
         <h1 class="heading-primary">The best rates in Japan</h1>
         <p class="heading-sub-sl">Ipsum dolor sit amet, consectetur adipisicing elit asperiore consectetur adipisicing elit. Asperiores voluptas.</p>
@@ -122,42 +136,42 @@
         </thead>
         <tbody>
           <tr>
-            <th class="currencies">Usd</th>
+            <th class="currencies"><img src="css/img/flags/usd.png" alt="usd-flag"><span>Usd</span></th>
             <td>111.27</td>
             <td>106.25</td>
           </tr>
           <tr>
-            <th class="currencies">Eur</th>
+            <th class="currencies"><img src="css/img/flags/eur.png" alt="eur-flag"><span>Eur</span></th>
             <td>132.14</td>
             <td>124.44</td>
           </tr>
           <tr>
-            <th class="currencies">Gpb</th>
+            <th class="currencies"><img src="css/img/flags/gbp.png" alt="gbp-flag"><span>Gpb</span></th>
             <td>148.46</td>
             <td>138.28</td>
           </tr>
           <tr>
-            <th class="currencies">Cny</th>
+            <th class="currencies"><img src="css/img/flags/cny.png" alt="cny-flag"><span>Cny</span></th>
             <td>17.10</td>
             <td>15.52</td>
           </tr>
           <tr>
-            <th class="currencies">Php</th>
+            <th class="currencies"><img src="css/img/flags/php.png" alt="php-flag"><span>Php</span></th>
             <td>2.326</td>
             <td>1.973</td>
           </tr>
           <tr>
-            <th class="currencies">Thb</th>
+            <th class="currencies"><img src="css/img/flags/thb.png" alt="thb-flag"><span>Thb</span></th>
             <td>3.63</td>
             <td>3.18</td>
           </tr>
           <tr>
-            <th class="currencies">Cad</th>
+            <th class="currencies"><img src="css/img/flags/cad.png" alt="cad-flag"><span>Cad</span></th>
             <td>89.59</td>
             <td>79.74</td>
           </tr>
           <tr>
-            <th class="currencies">Sgd</th>
+            <th class="currencies"><img src="css/img/flags/sgd.png" alt="sgd-flag"><span>Sgd</span></th>
             <td>84.29</td>
             <td>74.63</td>
           </tr>
@@ -248,20 +262,22 @@
           <a href="#">
             <img src="css/img/logo.png" alt="logo-img" class="footer-logo">
           </a>
-          <div class="footer-icon-ctn">
-            <a href="#">
-              <ion-icon class="footer-icons" name="logo-instagram"></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon class="footer-icons" name="logo-facebook"></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon class="footer-icons" name="logo-twitter"></ion-icon>
-            </a>
+          <div>
+            <div class="footer-icon-ctn">
+              <a href="#">
+                <ion-icon class="footer-icons" name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon class="footer-icons" name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon class="footer-icons" name="logo-twitter"></ion-icon>
+              </a>
+            </div>
+            <p class="copyright">
+              &copy; 2021 by Nippon Exchange, Inc. All Rights Reserved.
+            </p>
           </div>
-          <p class="copyright">
-            &copy; 2021 by Nippon Exchange, Inc. All Rights Reserved.
-          </p>
         </div>
         <div class="footer-textbox">
           <p class="footer-title">Company</p>
@@ -294,4 +310,5 @@
   </footer>
   <script src="script.js" charset="utf-8"></script>
 </body>
+
 </html>

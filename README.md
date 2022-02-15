@@ -14,8 +14,5 @@ This landing page provides quick and easy introduction to the company’s servic
 - Vanilla JavaScript
 
 ## Features
-- [x] Welcome page
-- [x] Quick currency converter
-- [ ] API for the rates
-- [ ] Ability to sign up and log in
-- [ ] Ability to safely store information when sending money
+-  Welcome page
+-  Quick currency converter

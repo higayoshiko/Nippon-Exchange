@@ -15,4 +15,5 @@ This landing page provides quick and easy introduction to the company’s servic
 
 ## Features
 -  Welcome page
+-  Responsive
 -  Quick currency converter

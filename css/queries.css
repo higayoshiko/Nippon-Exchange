@@ -1,0 +1,317 @@
+/******************
+Below 1330px
+*******************/
+@media (max-width: 83em) {
+  .header-grid {
+    grid-column-gap: 3.2rem;
+    margin: 10rem auto 0;
+  }
+
+  .heading-primary {
+    font-size: 4.4rem;
+  }
+
+  .converter-ctn {
+    padding: 2.4rem;
+  }
+}
+
+/******************
+Below 1150px
+*******************/
+@media (max-width: 72em) {
+  html {
+    font-size: 56.25%;
+  }
+
+  .heading-secondary {
+    font-size: 3.6rem;
+  }
+
+  .heading-tertiary {
+    font-size: 2rem;
+  }
+
+  .heading-sub-sm {
+    font-size: 1.6rem;
+  }
+
+  .heading-sub-sl {
+    font-size: 1.8rem;
+    /* line-height: 1.4; */
+  }
+
+  .result-num {
+    font-size: 2.4rem;
+  }
+
+  .converter-flex {
+    gap: .5rem;
+    /* margin: 3.2rem; */
+  }
+
+  .footer-text-ctn {
+    grid-column-gap: 6.4rem;
+  }
+}
+
+/******************
+Below 970px
+*******************/
+@media (max-width: 60em) {
+  html {
+    font-size: 50%;
+  }
+
+  .nav-burger {
+    display: block;
+  }
+
+  .main-nav-list {
+    display: none;
+  }
+
+  .header {
+    padding: 4.8rem;
+  }
+
+  .header-grid {
+    grid-template-columns: 1fr;
+    grid-row-gap: 9.6rem;
+    text-align: center;
+  }
+
+  .converter-ctn {
+    width: 60%;
+    justify-self: center;
+    padding: 3.6rem 2.4rem;
+  }
+
+  .default-ctn, .dropdown-list {
+    text-align: left;
+  }
+
+}
+
+/******************
+Below 822px
+*******************/
+@media (max-width: 51.25em) {
+  body {
+    padding: 0;
+  }
+
+  .grid-4-columns,
+  .grid-2-columns,
+  .register-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .features-box {
+    align-items: center;
+    text-align: center;
+  }
+
+  .converter-flex {
+    flex-direction: column;
+  }
+
+  .converter-icon {
+    align-self: center;
+    transform: rotate(90deg);
+  }
+
+  .table {
+    width: 60rem;
+  }
+
+  .register-form {
+    grid-template-columns: 1fr;
+    grid-row-gap: 2rem;
+  }
+
+  .img-ctn {
+    height: 60rem;
+    background-position: center;
+  }
+
+  .register-text-box {
+    padding: 6.4rem 3.2rem 6.4rem 0;
+  }
+
+  .testimonial-cards-ctn {
+    width: 80%;
+    margin: 0 auto
+  }
+
+  .footer-logos-ctn {
+    display: flex;
+    gap: 4.8rem;
+    align-items: center;
+  }
+
+}
+
+/******************
+Below 619px
+*******************/
+@media (max-width: 39em) {
+  .grid {
+    grid-row-gap: 4.8rem;
+  }
+
+  .main-nav {
+    padding-left: 2rem;
+  }
+
+  .logo-img {
+    height: 6.4rem;
+  }
+
+  .header {
+    padding: 1.2rem;
+  }
+
+  .header-grid {
+    grid-column-gap: 6.4rem;
+    grid-row-gap: 3.2rem;
+  }
+
+  .heading-primary,
+  .heading-secondary {
+    font-size: 3rem;
+  }
+
+  .converter-ctn {
+    width: 80%;
+    padding: 1.6rem;
+  }
+
+  .converter-flex {
+    gap: 1rem;
+    /* margin: 2.4rem 0; */
+  }
+
+  .result {
+    margin-bottom: 1.6rem;
+  }
+
+  .table {
+    width: 55%;
+  }
+
+  .currencies span {
+    display: block;
+    margin-top: 1rem;
+  }
+
+  .register-text-box {
+    padding: 0 0 4.8rem 0;
+  }
+
+  .footer-text-ctn {
+    flex-direction: column;
+  }
+
+  .footer-textbox {
+    margin: 0 auto;
+  }
+}
+
+/******************
+Below 370px
+*******************/
+@media (max-width: 25em) {
+
+  .header-grid {
+    grid-column-gap: 1.6rem;
+    margin: 2rem auto;
+    padding: 0;
+  }
+
+  .default-currency {
+    font-size: 1.6rem;
+  }
+
+  .converter-flex {
+    gap: .5rem;
+  }
+
+  .footer-text-ctn {
+    grid-column-gap: 3.2rem;
+  }
+
+  .footer, .section-table, .section-features {
+    padding: 6.4rem 0 3.2rem;
+  }
+}
+
+/******************
+Below 339px
+*******************/
+@media (max-width: 21.2em) {
+  .heading-sub-sl {
+    font-size: 1.4rem;
+  }
+
+  .converter-ctn {
+    width: auto;
+  }
+
+  .converter-input,
+  .default-ctn {
+    font-size: 1.2rem;
+    padding: .8rem;
+  }
+
+  .default-ctn {
+    width: 15.3rem;
+  }
+
+  .default-currency,
+  .result-num,
+  .convert-btn,
+  .testimonial-quote,
+  .footer-title,
+  .copyright {
+    font-size: 1.2rem;
+  }
+
+  .dropdown-icon {
+    font-size: 1.2rem;
+    position: absolute;
+    top: 1rem;
+    right: 1.2rem;
+  }
+
+  .table-head tr th {
+    padding: 1.2rem;
+    font-size: 1.4rem;
+  }
+
+  th,
+  td {
+    text-align: left;
+    padding: 1.2rem;
+    font-size: 1.2rem;
+  }
+
+  .footer-logos-ctn,
+  .footer-textbox-ctn {
+    gap: 2rem;
+  }
+
+  .footer-link,
+  .footer-link:link,
+  .footer-link:visited {
+    font-size: 1.2rem;
+    font-weight: 400
+  }
+}
+
+/*
+SPACING SYSTEM (px)
+2 / 4 / 8 / 12 / 16 / 24 / 32 / 48 / 64 / 80 / 96 / 128
+FONT SIZE SYSTEM (px)
+10 / 12 / 14 / 16 / 18 / 20 / 24 / 30 / 36 / 44 / 52 / 62 / 74 / 86 / 98
+*/

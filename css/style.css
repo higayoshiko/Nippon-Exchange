@@ -546,6 +546,11 @@ Footer Styles
   align-items: flex-start;
 }
 
+.footer-textbox-ctn {
+  display: flex;
+  gap: 8rem;
+}
+
 .footer-title {
   color: #5e5e5e;
   font-size: 1.8rem;

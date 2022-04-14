@@ -19,6 +19,15 @@
 </head>
 
 <body>
+  <nav class="hidden-nav">
+    <ul class="hidden-nav-list">
+      <li class="hidden-nav-item"><ion-icon class="nav-icon" name="close-circle-outline"></ion-icon></li>
+      <li class="hidden-nav-item"><a href="#rates" class="hidden-nav-link">Today's Rates</a></li>
+      <li class="hidden-nav-item"><a href="#register" class="hidden-nav-link">Send Money</a></li>
+      <li class="hidden-nav-item"><a href="#" class="hidden-nav-link">Log in</a></li>
+      <li class="hidden-nav-item"><a href="#register" class="hidden-nav-link">Register Now</a></li>
+    </ul>
+  </nav>
   <header class="header">
     <nav class="main-nav">
       <a href="#" class="logo">
@@ -30,6 +39,10 @@
         <li class="main-nav-item"><a href="#" class="main-nav-link link-log">Log in</a></li>
         <li class="main-nav-item"><a href="#register" class="main-nav-link link-cta">Register Now</a></li>
       </ul>
+
+      <button class="nav-burger">
+        <ion-icon class="nav-icon" name="menu-outline"></ion-icon>
+      </button>
     </nav>
 
     <div class="container grid header-grid">
@@ -126,42 +139,42 @@
         </thead>
         <tbody>
           <tr>
-            <th class="currencies">Usd</th>
+            <th class="currencies"><img src="css/img/flags/usd.png" alt="usd-flag"><span>Usd</span></th>
             <td>111.27</td>
             <td>106.25</td>
           </tr>
           <tr>
-            <th class="currencies">Eur</th>
+            <th class="currencies"><img src="css/img/flags/eur.png" alt="eur-flag"><span>Eur</span></th>
             <td>132.14</td>
             <td>124.44</td>
           </tr>
           <tr>
-            <th class="currencies">Gpb</th>
+            <th class="currencies"><img src="css/img/flags/gbp.png" alt="gbp-flag"><span>Gpb</span></th>
             <td>148.46</td>
             <td>138.28</td>
           </tr>
           <tr>
-            <th class="currencies">Cny</th>
+            <th class="currencies"><img src="css/img/flags/cny.png" alt="cny-flag"><span>Cny</span></th>
             <td>17.10</td>
             <td>15.52</td>
           </tr>
           <tr>
-            <th class="currencies">Php</th>
+            <th class="currencies"><img src="css/img/flags/php.png" alt="php-flag"><span>Php</span></th>
             <td>2.326</td>
             <td>1.973</td>
           </tr>
           <tr>
-            <th class="currencies">Thb</th>
+            <th class="currencies"><img src="css/img/flags/thb.png" alt="thb-flag"><span>Thb</span></th>
             <td>3.63</td>
             <td>3.18</td>
           </tr>
           <tr>
-            <th class="currencies">Cad</th>
+            <th class="currencies"><img src="css/img/flags/cad.png" alt="cad-flag"><span>Cad</span></th>
             <td>89.59</td>
             <td>79.74</td>
           </tr>
           <tr>
-            <th class="currencies">Sgd</th>
+            <th class="currencies"><img src="css/img/flags/sgd.png" alt="sgd-flag"><span>Sgd</span></th>
             <td>84.29</td>
             <td>74.63</td>
           </tr>
@@ -204,7 +217,16 @@
       <div class="container grid grid-2-columns">
         <div class="testimonial-cards-ctn">
           <figure class="testimonial-cards">
-            <img class="testimonial-img" src="css/img/testimonial/charles.jpg" alt="customer-img">
+            <div class="testimonial-flex">
+                <img class="testimonial-img" src="css/img/testimonial/charles.jpg" alt="customer-img">
+                <div class="rating-ctn">
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                </div>
+            </div>
             <blockquote class="testimonial-quote">
               "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
             </blockquote>
@@ -213,7 +235,16 @@
         </div>
         <div class="testimonial-cards-ctn">
           <figure class="testimonial-cards">
-            <img class="testimonial-img" src="css/img/testimonial/cindy.jpg" alt="customer-img">
+              <div class="testimonial-flex">
+                <img class="testimonial-img" src="css/img/testimonial/cindy.jpg" alt="customer-img">
+                <div class="rating-ctn">
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                </div>
+              </div>
             <blockquote class="testimonial-quote">
               "Risus sed vulputate odio ut. Tincidunt arcu non sodales neque. Tristique senectus et netus et malesuada. Semper risus in hendrerit gravida rutrum quisque. Velit euismod in pellentesque massa."
             </blockquote>
@@ -222,7 +253,16 @@
         </div>
         <div class="testimonial-cards-ctn">
           <figure class="testimonial-cards">
-            <img class="testimonial-img" src="css/img/testimonial/ian.jpg" alt="customer-img">
+              <div class="testimonial-flex">
+                <img class="testimonial-img" src="css/img/testimonial/ian.jpg" alt="customer-img">
+                <div class="rating-ctn">
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star-half"></ion-icon>
+                </div>
+              </div>
             <blockquote class="testimonial-quote">
               "Rutrum quisque non tellus orci. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat. Iaculis urna id volutpat lacus. Gravida cum sociis natoque penatibus et magnis dis parturient. Turpis massa tincidunt dui ut ornare lectus
               sit."
@@ -232,7 +272,16 @@
         </div>
         <div class="testimonial-cards-ctn">
           <figure class="testimonial-cards">
-            <img class="testimonial-img" src="css/img/testimonial/toa.jpg" alt="customer-img">
+            <div class="testimonial-flex">
+              <img class="testimonial-img" src="css/img/testimonial/toa.jpg" alt="customer-img">
+              <div class="rating-ctn">
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+                <ion-icon class="star" name="star"></ion-icon>
+              </div>
+            </div>
             <blockquote class="testimonial-quote">
               "Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. Enim facilisis gravida neque convallis a cras semper auctor neque. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus."
             </blockquote>
@@ -264,7 +313,7 @@
             </a>
           </div>
           <p class="copyright">
-            &copy; 2021 by Nippon Exchange, Inc. All Rights Reserved.
+            &copy; 2022 by Nippon Exchange, Inc. All Rights Reserved.
           </p>
         </div>
         <div class="footer-textbox-ctn">

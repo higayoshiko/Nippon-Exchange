@@ -1,33 +1,45 @@
 // Today's buy rates
-let usdBuy = 106.25;
-let eurBuy = 124.44;
-let gbpBuy = 138.28;
-let cnyBuy = 15.52;
-let phpBuy = 1.973;
-let thbBuy = 3.18;
-let cadBuy = 79.74;
-let sgdBuy = 74.63;
+const usdBuy = 106.25;
+const eurBuy = 124.44;
+const gbpBuy = 138.28;
+const cnyBuy = 15.52;
+const phpBuy = 1.973;
+const thbBuy = 3.18;
+const cadBuy = 79.74;
+const sgdBuy = 74.63;
 
 /*********************************/
 
-var dropdown = document.querySelector(".converter-dropdown");
-var amount = document.querySelector(".converter-input");
-var convertButton = document.querySelector(".convert-btn");
-var resultText = document.querySelector(".result-num");
+const dropdown = document.querySelector(".converter-dropdown");
+const amount = document.querySelector(".converter-input");
+const convertButton = document.querySelector(".convert-btn");
+const resultText = document.querySelector(".result-num");
+const burger = document.querySelector(".nav-burger");
+const hiddenNav = document.querySelector(".hidden-nav");
+const hiddenIcon = document.querySelector(".hidden-nav-item");
+
+hiddenIcon.addEventListener("click", function() {
+ hiddenNav.style.display = "none";
+});
+
+burger.addEventListener("click", function() {
+  hiddenNav.style.display = "block";
+});
+
 
 // store variables
-var acronym = "";
-var result = [];
-var value = [];
+let acronym = "";
+let result = [];
+let value = [];
 
 //select dropdown menu and apply eventListener
 dropdown.addEventListener("click", function() {
 
   //select dropdown-list of the clicked element
-  var list = this.querySelector(".dropdown-list");
+  const list = this.querySelector(".dropdown-list");
 
   //select default-ctn of the clicked element
-  var currentCurrency = this.querySelector(".default-ctn");
+  let currentCurrency = this.querySelector(".default-ctn");
   //pass it to changeCurrency to change the text
   changeCurrency(list, currentCurrency);
 
@@ -43,9 +55,9 @@ dropdown.addEventListener("click", function() {
 //function to change text inside the default option box
 function changeCurrency(list, currentCurrency) {
   //select all the links of the selected dropdown-list
-  var links = list.querySelectorAll(".dropdown-link");
+  const links = list.querySelectorAll(".dropdown-link");
   //select default-currency class of the selected dropdown-list
-  var span = currentCurrency.querySelector(".default-currency");
+  let span = currentCurrency.querySelector(".default-currency");
 
   //select the link and change the current/default currency
   links.forEach(item => {
@@ -54,7 +66,7 @@ function changeCurrency(list, currentCurrency) {
       acronym = this.querySelector("span").innerHTML;
 
       //get currency
-      var newCurrency = this.innerHTML;
+      let newCurrency = this.innerHTML;
 
       //change currency inside dropdown
       span.innerHTML = newCurrency;

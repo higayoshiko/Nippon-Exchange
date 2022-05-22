@@ -193,6 +193,7 @@ Main Nav-bar Styles
 .logo-img {
   height: 12.8rem;
   margin-top: 2rem;
+  animation: show 2s linear;
 }
 
 .main-nav-list {
@@ -216,6 +217,7 @@ Main Nav-bar Styles
   font-weight: 600;
   text-decoration: none;
   transition: all .3s;
+  animation: show 1s linear;
 }
 
 .main-nav-link:hover,
@@ -250,6 +252,7 @@ Main Nav-bar Styles
   border: none;
   background-color: #fff;
   cursor: pointer;
+  animation: show 1s linear;
 }
 
 .nav-icon {
@@ -274,11 +277,11 @@ Header Styles
 .header-grid {
   max-width: 120rem;
   padding: 3.2rem;
-
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 9.6rem;
   /* margin-top: 9.6rem; */
   margin: 12.8rem auto;
+  animation: moveUp .8s ease-in;
 }
 
 .converter-ctn {
@@ -320,12 +323,13 @@ Header Styles
 }
 
 .default-ctn {
+  position: relative;
   width: 21.3rem;
   border: 1px solid #c4c4c4;
   border-radius: .5rem;
   background-color: #fff;
   padding: 1.3rem;
-  position: relative;
+  cursor: pointer;
 }
 
 .default-currency {
@@ -367,6 +371,7 @@ Header Styles
   font-size: 1.8rem;
   color: #212121;
   padding: 1.2rem;
+  cursor: pointer;
 }
 
 .dropdown-link:hover {
@@ -422,6 +427,7 @@ Features Styles
   padding: 1rem;
   border-radius: 50%;
   margin-bottom: 2.4rem;
+  animation: popUp 1s linear;
 }
 
 /******************
@@ -434,6 +440,7 @@ Table Styles
 .table {
   width: 80rem;
   border-collapse: collapse;
+  animation: moveUp .8s ease-in;
 }
 
 .currencies {
@@ -542,6 +549,12 @@ Testimonial Styles
   background-image: linear-gradient(rgba(255, 243, 204, 0.5),
       rgba(255, 230, 153, 0.5));
   transform: skewX(-10deg);
+  animation: show 2s ease;
+  transition: all .3s;
+}
+
+.testimonial-cards-ctn:hover {
+  transform: skewX(-10deg) translateY(-.5rem);
 }
 
 .testimonial-cards {
@@ -611,6 +624,10 @@ Footer Styles
   margin-right: 1.2rem;
 }
 
+.footer-icons:hover {
+  color: #212121;
+}
+
 .footer-text-ctn {
   display: flex;
   gap: 9.6rem;
@@ -643,6 +660,75 @@ Footer Styles
   color: #9D9D9D;
   text-decoration: none;
   margin-bottom: 1.6rem;
+}
+
+.footer-link:hover {
+  color: #212121;
+}
+
+/********************************************************************
+///////////////////////////////Animation/////////////////////////
+********************************************************************/
+@keyframes moveUp {
+  0% {
+    opacity: 0;
+    transform: translateY(10rem);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes popUp {
+  0% {
+    opacity: 0;
+    transform: scale(0.5, 0.5);
+  }
+
+  50% {
+    transform: scale(1.2, 1.2);
+  }
+
+  100% {
+    opacity: 1;
+    transform: scale(1, 1);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+
+  50% {
+    opacity: .5;
+  }
+
+  100% {
+    opacity: 1;
+  }
+}
+
+
+/******************
+Animation delay
+*******************/
+.delay--1 {
+  animation-delay: 0.5s;
+}
+
+.delay--2 {
+  animation-delay: 0.6s;
+}
+
+.delay--3 {
+  animation-delay: 0.7s;
+}
+
+.delay--4 {
+  animation-delay: 0.8s;
 }
 
 /********************************************************************

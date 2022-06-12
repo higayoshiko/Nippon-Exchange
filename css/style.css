@@ -382,8 +382,13 @@ Header Styles
   margin-bottom: 3.2rem;
 }
 
-.result-num {
+.results-main {
   font-size: 3rem;
+}
+
+.results-sub {
+  font-size: 1.4rem;
+  margin-top: 1rem;
 }
 
 .convert-btn,
@@ -778,7 +783,7 @@ Below 1150px
     /* line-height: 1.4; */
   }
 
-  .result-num {
+  .results-main {
     font-size: 2.4rem;
   }
 
@@ -1014,7 +1019,8 @@ Below 345px
   }
 
   .default-currency,
-  .result-num,
+  .results-main,
+  .results-sub,
   .convert-btn,
   .testimonial-quote,
   .footer-title,

@@ -54,14 +54,14 @@
 
         <div class="converter-flex">
           <div class="converter-input-ctn">
-            <label class="converter-label" for="amount">Amount in JPY</label>
+            <label class="converter-label" for="amount">Amount</label>
             <input type="number" class="converter-input" placeholder="100">
           </div>
           <div class="converter-icon">
             <ion-icon class="converter-icon--swap" name="swap-horizontal-outline"></ion-icon>
           </div>
           <div class="converter-dropdown">
-            <label class="converter-label" for="to">To</label>
+            <label class="converter-label" for="to">Currency</label>
             <div class="default-ctn">
               <span class="default-currency">Choose currency</span>
               <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
@@ -79,7 +79,10 @@
           </div>
         </div>
         <div class="result">
-          <p class="result-num">1 JPY = 106.25 USD</p>
+          <p class="result-num"><span class="result-val">1 </span><span class="result-acronym">USD</span>
+             = <span class="result-rate">106.25</span> JPY
+            </p>
+            <p>1 <span class="result-acronym">USD</span> = <span class="currency-rate">106.25</span></p>
         </div>
         <button class="convert-btn" type="button" name="button">Convert</button>
       </div>
@@ -138,49 +141,49 @@
         <tbody>
           <tr>
             <th class="currencies"><img src="css/img/flags/usd.png" alt="usd-flag"><span>Usd</span></th>
-            <td>111.27</td>
-            <td>106.25</td>
+            <td class="sellRate">111.27</td>
+            <td class="buyRate">106.25</td>
           </tr>
           <tr>
             <th class="currencies"><img src="css/img/flags/eur.png" alt="eur-flag"><span>Eur</span></th>
-            <td>132.14</td>
-            <td>124.44</td>
+            <td class="sellRate">132.14</td>
+            <td class="buyRate">124.44</td>
           </tr>
           <tr>
-            <th class="currencies"><img src="css/img/flags/gbp.png" alt="gbp-flag"><span>Gpb</span></th>
-            <td>148.46</td>
-            <td>138.28</td>
+            <th class="currencies"><img src="css/img/flags/gbp.png" alt="gbp-flag"><span>Gbp</span></th>
+            <td class="sellRate">148.46</td>
+            <td class="buyRate">138.28</td>
           </tr>
           <tr>
             <th class="currencies"><img src="css/img/flags/cny.png" alt="cny-flag"><span>Cny</span></th>
-            <td>17.10</td>
-            <td>15.52</td>
+            <td class="sellRate">17.10</td>
+            <td class="buyRate">15.52</td>
           </tr>
           <tr>
             <th class="currencies"><img src="css/img/flags/php.png" alt="php-flag"><span>Php</span></th>
-            <td>2.326</td>
-            <td>1.973</td>
+            <td class="sellRate">2.326</td>
+            <td class="buyRate">1.973</td>
           </tr>
           <tr>
             <th class="currencies"><img src="css/img/flags/thb.png" alt="thb-flag"><span>Thb</span></th>
-            <td>3.63</td>
-            <td>3.18</td>
+            <td class="sellRate">3.63</td>
+            <td class="buyRate">3.18</td>
           </tr>
           <tr>
             <th class="currencies"><img src="css/img/flags/cad.png" alt="cad-flag"><span>Cad</span></th>
-            <td>89.59</td>
-            <td>79.74</td>
+            <td class="sellRate">89.59</td>
+            <td class="buyRate">79.74</td>
           </tr>
           <tr>
             <th class="currencies"><img src="css/img/flags/sgd.png" alt="sgd-flag"><span>Sgd</span></th>
-            <td>84.29</td>
-            <td>74.63</td>
+            <td class="sellRate">84.29</td>
+            <td class="buyRate">74.63</td>
           </tr>
         </tbody>
       </table>
       <div class="container text-center">
         <p class="heading-sub-ss">
-          *Find the nearest store to make sell transactions.
+          *Rates as of <span>June 2022</span> UTC
         </p>
         <a href="#" class="link table-link">Find out more &rarr;</a>
       </div>
@@ -311,7 +314,7 @@
             </a>
           </div>
           <p class="copyright">
-            &copy; 2022 by Nippon Exchange, Inc. All Rights Reserved.
+            &copy; <span class="copyrightYear">2022</span> by Nippon Exchange, Inc. All Rights Reserved.
           </p>
         </div>
         <div class="footer-textbox-ctn">

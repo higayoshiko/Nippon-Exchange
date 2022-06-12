@@ -1,139 +1,122 @@
-// Today's buy rates
-const usdBuy = 106.25;
-const eurBuy = 124.44;
-const gbpBuy = 138.28;
-const cnyBuy = 15.52;
-const phpBuy = 1.973;
-const thbBuy = 3.18;
-const cadBuy = 79.74;
-const sgdBuy = 74.63;
 
-/*********************************/
-
-const dropdown = document.querySelector(".converter-dropdown");
-const amount = document.querySelector(".converter-input");
-const convertButton = document.querySelector(".convert-btn");
-const resultText = document.querySelector(".result-num");
-const burger = document.querySelector(".nav-burger");
-const hiddenNav = document.querySelector(".hidden-nav");
-const hiddenIcon = document.querySelector(".hidden-nav-item");
-
-hiddenIcon.addEventListener("click", function() {
- hiddenNav.style.display = "none";
-});
-
-burger.addEventListener("click", function() {
-  hiddenNav.style.display = "block";
-});
+(function() {
+  const dropdown = document.querySelector(".converter-dropdown");
+  const amount = document.querySelector(".converter-input");
+  const convertButton = document.querySelector(".convert-btn");
+  // const resultText = document.querySelector(".result-num");
+  const burger = document.querySelector(".nav-burger");
+  const hiddenNav = document.querySelector(".hidden-nav");
+  const hiddenIcon = document.querySelector(".hidden-nav-item");
+  const copyrightYear = document.querySelector(".copyrightYear");
+  const rateUpdateDateAndTime = document.querySelector(".heading-sub-ss span");
+  const currentRateInCoverter = document.querySelector(".result-rate");
+  const resultValue = document.querySelector(".result-val");
+  const resultAcronym = document.querySelector(".result-acronym");
 
 
-// store variables
-let acronym = "";
-let result = [];
-let value = [];
+  let acronym = "";
 
-//select dropdown menu and apply eventListener
-dropdown.addEventListener("click", function() {
+  copyrightYear.innerHTML = new Date().getFullYear();
 
-  //select dropdown-list of the clicked element
-  const list = this.querySelector(".dropdown-list");
+  let rateList = {};
 
-  //select default-ctn of the clicked element
-  let currentCurrency = this.querySelector(".default-ctn");
-  //pass it to changeCurrency to change the text
-  changeCurrency(list, currentCurrency);
+  function storeJsonAsObjects(buyJson, sellJson) {
 
-  //if it contains the class of "hidden" remove it otherwise add it
-  if (list.classList.contains("hidden")) {
-    list.classList.remove("hidden");
-  } else {
-    list.classList.add("hidden");
-  }
-});
+      if(!rateList[buyJson["base_code"]] && !rateList[sellJson["target_code"]]){
+        rateList[buyJson["base_code"]] = {
+          "BUY": buyJson["conversion_rate"],
+          "SELL": sellJson["conversion_rate"]
+        }
+    }
+  };
 
+  const tableCurrencies = document.querySelectorAll(".currencies span");
 
-//function to change text inside the default option box
-function changeCurrency(list, currentCurrency) {
-  //select all the links of the selected dropdown-list
-  const links = list.querySelectorAll(".dropdown-link");
-  //select default-currency class of the selected dropdown-list
-  let span = currentCurrency.querySelector(".default-currency");
+  tableCurrencies.forEach(async function(currency) {
 
-  //select the link and change the current/default currency
-  links.forEach(item => {
-    item.addEventListener("click", function() {
-      //get acronym and store it
-      acronym = this.querySelector("span").innerHTML;
+    const apiKeys = "";
+    let currencyNames = currency.innerHTML.toUpperCase();
+    let selectSellCell = currency.parentNode.nextElementSibling;
+    let selectBuyCell = selectSellCell.nextElementSibling;
 
-      //get currency
-      let newCurrency = this.innerHTML;
+    try {
+      let [buyFetch, sellFetch] = await Promise.all([
+        //buy rates
+        fetch(`https://v6.exchangerate-api.com/v6/${apiKeys}/pair/${currencyNames}/JPY`),
+        //sell rates
+        fetch(`https://v6.exchangerate-api.com/v6/${apiKeys}/pair/JPY/${currencyNames}`)
+      ]);
 
-      //change currency inside dropdown
-      span.innerHTML = newCurrency;
-    });
+      (async function convertToJson() {
+        let buyJson = await buyFetch.json();
+        let sellJson = await sellFetch.json();
+        storeJsonAsObjects(buyJson, sellJson);
+
+        if(currencyNames === buyJson["base_code"] && currencyNames === sellJson["target_code"]){
+          selectSellCell.innerHTML = sellJson["conversion_rate"];
+          selectBuyCell.innerHTML = buyJson["conversion_rate"];
+        }
+
+        rateUpdateDateAndTime.innerHTML = buyJson["time_last_update_utc"];
+
+      })();
+    } catch (err) {
+      console.log(err)
+    }
   });
-};
 
-//when convert button is clicked, variables value and acronym will be passed to getAmount()
-convertButton.addEventListener("click", function() {
-  //get amount/value and convert it to a number
-  value = Number(amount.value);
+  //show conversion result
+  function showResult(value, result) {
+    // resultText.innerHTML = `${value} JPY = ${result} ${acronym}`;
+    resultValue.innerHTML = value;
+    currentRateInCoverter.innerHTML = result;
+    resultAcronym.innerHTML = acronym;
 
-  getAmount(value, acronym);
-
-});
-
-//calculate the converted amount from Japanese to the selected currency
-//round it off and store the result
-function getAmount(value, acronym) {
-
-  switch (acronym) {
-    case 'USD':
-      result = (value / usdBuy).toFixed(2);
-      showResult();
-      break;
-
-    case 'EUR':
-      result = (value / eurBuy).toFixed(2);
-        showResult();
-      break;
-
-    case 'GBP':
-      result = (value / gbpBuy).toFixed(2);
-        showResult();
-      break;
-
-    case 'CNY':
-      result = (value / cnyBuy).toFixed(2);
-        showResult();
-      break;
-
-    case 'PHP':
-      result = (value / phpBuy).toFixed(2);
-      showResult();
-      break;
-
-    case 'THB':
-      result = (value / thbBuy).toFixed(2);
-        showResult();
-      break;
-
-    case 'CAD':
-      result = (value / cadBuy).toFixed(2);
-        showResult();
-      break;
-
-    case 'SGD':
-      result = (value / sgdBuy).toFixed(2);
-        showResult();
-      break;
-
-    default:
-      console.log("No currency")
   }
-}
 
-//show conversion result
-function showResult() {
-  resultText.innerHTML = value + "JPY = " + result + acronym;
-}
+  //function to change text inside the default option box
+  function changeCurrency(list, currentCurrency) {
+    const links = list.querySelectorAll(".dropdown-link");
+    let span = currentCurrency.querySelector(".default-currency");
+
+
+    links.forEach(item => {
+      item.addEventListener("click", function() {
+        acronym = this.querySelector("span").innerHTML;
+        let newCurrency = this.innerHTML;
+        span.innerHTML = newCurrency;
+        currentRateInCoverter.innerHTML = rateList[acronym].BUY;
+        resultValue.innerHTML = "1";
+      });
+    });
+  };
+
+  convertButton.addEventListener("click", function() {
+    //get amount/value and convert it to a number
+    value = Number(amount.value);
+    result = (value / rateList[acronym].BUY).toFixed(2);
+     showResult(value, result);
+  });
+
+  //select dropdown menu and apply eventListener
+  dropdown.addEventListener("click", function() {
+    const list = this.querySelector(".dropdown-list");
+    let currentCurrency = this.querySelector(".default-ctn");
+
+    changeCurrency(list, currentCurrency);
+
+    if (list.classList.contains("hidden")) {
+      list.classList.remove("hidden");
+    } else {
+      list.classList.add("hidden");
+    }
+  });
+
+  hiddenIcon.addEventListener("click", function() {
+    hiddenNav.style.display = "none";
+  });
+
+  burger.addEventListener("click", function() {
+    hiddenNav.style.display = "block";
+  });
+})();

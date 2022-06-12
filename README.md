@@ -3,10 +3,11 @@
 ## Introduction
 **Nippon Exchange** is a simple landing page that is designed to provide conversion of Japanese Yen to other currencies.
 
-## Motivation
-Financial service companies in Japan either do not provide enough information online or have a very complex website that is very confusing for the customers.
+Currency and exchange rate data provided by ExchangeRate-API.
+https://www.exchangerate-api.com
 
-This landing page provides quick and easy introduction to the company’s services.
+ExchangeRate-API provides an open access and does not require any API keys for a one way call. 
+Therefore, I can't provide an updated SELL rates. However, I have an example code for multiple API calls in the multiple_api_calls branch.
 
 ## Technologies
 - HTML5
@@ -14,6 +15,7 @@ This landing page provides quick and easy introduction to the company’s servic
 - Vanilla JavaScript
 
 ## Features
--  Welcome page
+-  Client-side API
 -  Responsive
 -  Quick currency converter
+

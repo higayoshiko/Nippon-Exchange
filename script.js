@@ -6,7 +6,7 @@
   const hiddenIcon = document.querySelector(".hidden-nav-item");
   const copyrightYear = document.querySelector(".copyrightYear");
   const resultValue = document.querySelector(".results-val");
-  const resultAcronym = document.querySelector(".results-acronym--1");
+  const resultAcronym = document.querySelector(".results-acronym");
   const resultAcronymTwo = document.querySelector(".results-acronym--sub");
   const currentRateInCoverter = document.querySelector(".results-rate");
   const tableCurrencies = document.querySelectorAll(".currencies span");
@@ -47,7 +47,6 @@
     const resultAmount = document.querySelector(".results-amount");
     resultValue.innerHTML = result;
     resultAmount.innerHTML = value;
-    resultAcronym.innerHTML = acronym;
   }
 
   //function to change text inside the default option box
@@ -62,6 +61,7 @@
         span.innerHTML = newCurrency;
         currentRateInCoverter.innerHTML = rateList[acronym];
         resultAcronymTwo.innerHTML = acronym;
+        resultAcronym.innerHTML = acronym;
       });
     });
   };

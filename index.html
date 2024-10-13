@@ -1,244 +1,373 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
 
-<head>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Rubik:wght@400;500;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="shortcut icon" type="image/png" />
 
-  <link rel="stylesheet" href="css/style.css">
-  <link rel="shortcut icon" type="image/png">
+    <title>Nippon Exchange</title>
+  </head>
 
-  <title>Nippon Exchange</title>
-</head>
-
-<body>
-  <nav class="hidden-nav">
-    <ul class="hidden-nav-list">
-      <li class="hidden-nav-item"><ion-icon class="nav-icon" name="close-circle-outline"></ion-icon></li>
-      <li class="hidden-nav-item"><a href="#rates" class="hidden-nav-link">Today's Rates</a></li>
-      <li class="hidden-nav-item"><a href="#register" class="hidden-nav-link">Send Money</a></li>
-      <li class="hidden-nav-item"><a href="#" class="hidden-nav-link">Log in</a></li>
-      <li class="hidden-nav-item"><a href="#register" class="hidden-nav-link">Register Now</a></li>
-    </ul>
-  </nav>
-  <header class="header">
-    <nav class="main-nav">
-      <a href="#" class="logo">
-        <img src="css/img/logo.webp" alt="nipponexchange-img" class="logo-img">
-      </a>
-      <ul class="main-nav-list">
-        <li class="main-nav-item"><a href="#rates" class="main-nav-link">Today's Rates</a></li>
-        <li class="main-nav-item"><a href="#register" class="main-nav-link">Send Money</a></li>
-        <li class="main-nav-item"><a href="#" class="main-nav-link link-log">Log in</a></li>
-        <li class="main-nav-item"><a href="#register" class="main-nav-link link-cta">Register Now</a></li>
+  <body>
+    <nav class="hidden-nav">
+      <ul class="hidden-nav-list">
+        <li class="hidden-nav-item">
+          <ion-icon class="nav-icon" name="close-circle-outline"></ion-icon>
+        </li>
+        <li class="hidden-nav-item">
+          <a href="#rates" class="hidden-nav-link">Today's Rates</a>
+        </li>
+        <li class="hidden-nav-item">
+          <a href="#register" class="hidden-nav-link">Send Money</a>
+        </li>
+        <li class="hidden-nav-item">
+          <a href="#" class="hidden-nav-link">Log in</a>
+        </li>
+        <li class="hidden-nav-item">
+          <a href="#register" class="hidden-nav-link">Register Now</a>
+        </li>
       </ul>
-
-      <button class="nav-burger">
-        <ion-icon class="nav-icon" name="menu-outline"></ion-icon>
-      </button>
     </nav>
+    <header class="header">
+      <nav class="main-nav">
+        <a href="#" class="logo">
+          <img
+            src="css/img/logo.png"
+            alt="nipponexchange-img"
+            class="logo-img"
+          />
+        </a>
+        <ul class="main-nav-list">
+          <li class="main-nav-item">
+            <a href="#rates" class="main-nav-link">Today's Rates</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#register" class="main-nav-link">Send Money</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#" class="main-nav-link link-log">Log in</a>
+          </li>
+          <li class="main-nav-item">
+            <a href="#register" class="main-nav-link link-cta">Register Now</a>
+          </li>
+        </ul>
 
-    <div class="container grid header-grid">
-      <div class="header-text-ctn">
-        <h1 class="heading-primary">The best rates in Japan</h1>
-        <p class="heading-sub-sl">Ipsum dolor sit amet, consectetur adipisicing elit asperiore consectetur adipisicing elit. Asperiores voluptas.</p>
-      </div>
+        <button class="nav-burger">
+          <ion-icon class="nav-icon" name="menu-outline"></ion-icon>
+        </button>
+      </nav>
 
-      <div class="converter-ctn">
-        <h3 class="heading-tertiary">Currency Converter</h3>
-
-        <div class="converter-flex">
-          <div class="converter-input-ctn">
-            <label class="converter-label" for="amount">Amount</label>
-            <input type="number" class="converter-input" placeholder="100">
-          </div>
-          <div class="converter-icon">
-            <ion-icon class="converter-icon--swap" name="swap-horizontal-outline"></ion-icon>
-          </div>
-          <div class="converter-dropdown">
-            <label class="converter-label" for="to">Currency</label>
-            <div class="default-ctn">
-              <span class="default-currency">Choose currency</span>
-              <ion-icon class="dropdown-icon" name="chevron-down-outline"></ion-icon>
-            </div>
-            <ul class="dropdown-list hidden">
-              <li class="dropdown-link">US Dollars-<span>USD</span></li>
-              <li class="dropdown-link">EURO-<span>EUR</span></li>
-              <li class="dropdown-link">British Pound-<span>GBP</span></li>
-              <li class="dropdown-link">Chinese Yuan-<span>CNY</span></li>
-              <li class="dropdown-link">Philippine Peso-<span>PHP</span></li>
-              <li class="dropdown-link">Thai Baht-<span>THB</span></li>
-              <li class="dropdown-link">Canadian Dollars-<span>CAD</span></li>
-              <li class="dropdown-link">Singapore Dollars-<span>SGD</span></li>
-            </ul>
-          </div>
+      <div class="container grid header-grid">
+        <div class="header-text-ctn">
+          <h1 class="heading-primary">The best rates in Japan</h1>
+          <p class="heading-sub-sl">
+            Ipsum dolor sit amet, consectetur adipisicing elit asperiore
+            consectetur adipisicing elit. Asperiores voluptas.
+          </p>
         </div>
-        <div class="result">
-          <p class="results-main"><span class="results-amount">1 </span><span class="results-acronym">USD</span>
-             = <span class="results-val">&nbsp;</span> JPY
+
+        <div class="converter-ctn">
+          <h3 class="heading-tertiary">Currency Converter</h3>
+
+          <div class="converter-flex">
+            <div class="converter-input-ctn">
+              <label class="converter-label" for="amount">Amount</label>
+              <input type="number" class="converter-input" placeholder="100" />
+            </div>
+            <div class="converter-icon">
+              <ion-icon
+                class="converter-icon--swap"
+                name="swap-horizontal-outline"
+              ></ion-icon>
+            </div>
+            <div class="converter-dropdown">
+              <label class="converter-label" for="to">Currency</label>
+              <div class="default-ctn">
+                <span class="default-currency">Choose currency</span>
+                <ion-icon
+                  class="dropdown-icon"
+                  name="chevron-down-outline"
+                ></ion-icon>
+              </div>
+              <ul class="dropdown-list hidden">
+                <li class="dropdown-link">US Dollars-<span>USD</span></li>
+                <li class="dropdown-link">EURO-<span>EUR</span></li>
+                <li class="dropdown-link">British Pound-<span>GBP</span></li>
+                <li class="dropdown-link">Chinese Yuan-<span>CNY</span></li>
+                <li class="dropdown-link">Philippine Peso-<span>PHP</span></li>
+                <li class="dropdown-link">Thai Baht-<span>THB</span></li>
+                <li class="dropdown-link">Canadian Dollars-<span>CAD</span></li>
+                <li class="dropdown-link">
+                  Singapore Dollars-<span>SGD</span>
+                </li>
+              </ul>
+            </div>
+          </div>
+          <div class="result">
+            <p class="results-main">
+              <span class="results-amount">1 </span
+              ><span class="results-acronym">USD</span> =
+              <span class="results-val">&nbsp;</span> JPY
             </p>
-          <p class="results-sub">1 <span class="results-acronym--sub">currency</span> = <span class="results-rate">xxx</span> JPY</p>
+            <p class="results-sub">
+              1 <span class="results-acronym--sub">currency</span> =
+              <span class="results-rate">xxx</span> JPY
+            </p>
+          </div>
+          <button class="convert-btn" type="button" name="button">
+            Convert
+          </button>
         </div>
-        <button class="convert-btn" type="button" name="button">Convert</button>
       </div>
-    </div>
-  </header>
+    </header>
 
-  <main>
-    <section class="section-features">
-      <div class="container text-center">
-        <h2 class="heading-secondary">Nippon Exchange best features</h2>
-      </div>
-      <div class="container grid grid-4-columns">
-        <div class="features-box">
-          <svg xmlns="http://www.w3.org/2000/svg" class="features-icon delay--1 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
-          <h3 class="heading-tertiary">Safe and Reliable</h3>
-          <p class="heading-sub-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores voluptas.</p>
+    <main>
+      <section class="section-features">
+        <div class="container text-center">
+          <h2 class="heading-secondary">Nippon Exchange best features</h2>
         </div>
-        <div class="features-box">
-          <svg xmlns="http://www.w3.org/2000/svg" class="features-icon delay--2 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
-          </svg>
-          <h3 class="heading-tertiary">Best Rates</h3>
-          <p class="heading-sub-sm">Nobis alias recusandae consequatur quasi necessitatibus ipsa harum.</p>
+        <div class="container grid grid-4-columns">
+          <div class="features-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="features-icon delay--1 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 9V7a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2m2 4h10a2 2 0 002-2v-6a2 2 0 00-2-2H9a2 2 0 00-2 2v6a2 2 0 002 2zm7-5a2 2 0 11-4 0 2 2 0 014 0z"
+              />
+            </svg>
+            <h3 class="heading-tertiary">Safe and Reliable</h3>
+            <p class="heading-sub-sm">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit.
+              Asperiores voluptas.
+            </p>
+          </div>
+          <div class="features-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="features-icon delay--2 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V8a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z"
+              />
+            </svg>
+            <h3 class="heading-tertiary">Best Rates</h3>
+            <p class="heading-sub-sm">
+              Nobis alias recusandae consequatur quasi necessitatibus ipsa
+              harum.
+            </p>
+          </div>
+          <div class="features-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="features-icon delay--3 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
+              />
+            </svg>
+            <h3 class="heading-tertiary">Fast and Easy</h3>
+            <p class="heading-sub-sm">
+              Culpa qui officia deserunt mollitasas anim id est laborusxsm
+              dsdsx.
+            </p>
+          </div>
+          <div class="features-box">
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              class="features-icon delay--4 h-6 w-6"
+              fill="none"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              <path
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z"
+              />
+            </svg>
+            <h3 class="heading-tertiary">Best Customer Service</h3>
+            <p class="heading-sub-sm">
+              Sunt in culpa qui officia deserunt mollit anim id est laborum.
+            </p>
+          </div>
         </div>
-        <div class="features-box">
-          <svg xmlns="http://www.w3.org/2000/svg" class="features-icon delay--3 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z" />
-          </svg>
-          <h3 class="heading-tertiary">Fast and Easy</h3>
-          <p class="heading-sub-sm">Culpa qui officia deserunt mollitasas anim id est laborusxsm dsdsx.</p>
-        </div>
-        <div class="features-box">
-          <svg xmlns="http://www.w3.org/2000/svg" class="features-icon delay--4 h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
-            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v6a2 2 0 01-2 2h-2v4l-4-4H9a1.994 1.994 0 01-1.414-.586m0 0L11 14h4a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2v4l.586-.586z" />
-          </svg>
-          <h3 class="heading-tertiary">Best Customer Service</h3>
-          <p class="heading-sub-sm">Sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-        </div>
-      </div>
-    </section>
+      </section>
 
-    <section class="section-table" id="rates">
-      <div class="container text-center">
-        <h2 class="heading-secondary">Today's Rates</h2>
-      </div>
-      <table class="table container">
-        <thead class="table-head">
-          <tr>
-            <th>Currency</th>
-            <th>Buy</th>
-            <th>Sell</th>
-          </tr>
-        </thead>
-        <tbody>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/usd.webp" alt="usd-flag"><span>Usd</span></th>
-            <td class="buyRate">106.25</td>
-            <td class="sellRate">111.27</td>
-          </tr>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/eur.webp" alt="eur-flag"><span>Eur</span></th>
-            <td class="buyRate">124.44</td>
-            <td class="sellRate">132.14</td>
-          </tr>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/gbp.webp" alt="gbp-flag"><span>Gbp</span></th>
-            <td class="buyRate">138.28</td>
-            <td class="sellRate">148.46</td>
-          </tr>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/cny.webp" alt="cny-flag"><span>Cny</span></th>
-            <td class="buyRate">15.52</td>
-            <td class="sellRate">17.10</td>
-          </tr>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/php.webp" alt="php-flag"><span>Php</span></th>
-            <td class="buyRate">1.973</td>
-            <td class="sellRate">2.326</td>
-          </tr>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/thb.webp" alt="thb-flag"><span>Thb</span></th>
-            <td class="buyRate">3.18</td>
-            <td class="sellRate">3.63</td>
-          </tr>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/cad.webp" alt="cad-flag"><span>Cad</span></th>
-            <td class="buyRate">79.74</td>
-            <td class="sellRate">89.59</td>
-          </tr>
-          <tr>
-            <th class="currencies"><img src="css/img/flags/sgd.webp" alt="sgd-flag"><span>Sgd</span></th>
-            <td class="buyRate">74.63</td>
-            <td class="sellRate">84.29</td>
-          </tr>
-        </tbody>
-      </table>
-      <div class="container text-center">
-        <a class="heading-sub-ss" href="https://www.exchangerate-api.com">Rates By Exchange Rate API</a>
-        <p class="heading-sub-ss">
-          *Rates as of <span>June 2022</span> UTC
-        </p>
-        <a href="#" class="link table-link">Find out more &rarr;</a>
-      </div>
-    </section>
-
-    <section class="section-register" id="register">
-      <div class="container register-grid">
-        <div class="register-text-box">
-          <h2 class="heading-secondary">Start sending money now</h2>
-          <p class="heading-sub-sm">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud.</p>
-          <form action="#" class="register-form">
-            <div>
-              <label for="full-name" class="register-label">Full Name</label>
-              <input class="register-input" type="text" placeholder="Mark Williams" required>
-            </div>
-            <div>
-              <label for="email" class="register-label">Email Address</label>
-              <input class="register-input" type="text" placeholder="markwilliams@example.com" required>
-            </div>
-            <button class="btn btn-cta">Join us!</button>
-            <button class="btn btn-log">Log in</button>
-          </form>
+      <section class="section-table" id="rates">
+        <div class="container text-center">
+          <h2 class="heading-secondary">Today's Rates</h2>
         </div>
-        <div class="img-ctn" role="img"></div>
-      </div>
-    </section>
-
-    <section class="section-testimonial">
-      <div class="container text-center">
-        <h2 class="heading-secondary">Recommended by verified users!</h2>
-      </div>
-      <div class="container grid grid-2-columns">
-        <div class="testimonial-cards-ctn delay--1">
-          <figure class="testimonial-cards">
-            <div class="testimonial-flex">
-                <img class="testimonial-img" src="css/img/testimonial/charles.webp" alt="customer-img">
-                <div class="rating-ctn">
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="star"></ion-icon>
-                  <ion-icon class="star" name="star"></ion-icon>
-                </div>
-            </div>
-            <blockquote class="testimonial-quote">
-              "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
-            </blockquote>
-            <p class="testimonial-name">- Charles Evans</p>
-          </figure>
+        <table class="table container">
+          <thead class="table-head">
+            <tr>
+              <th>Currency</th>
+              <th>Buy</th>
+              <th>Sell</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/usd.webp" alt="usd-flag" /><span
+                  >Usd</span
+                >
+              </th>
+              <td class="buyRate">106.25</td>
+              <td class="sellRate">111.27</td>
+            </tr>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/eur.webp" alt="eur-flag" /><span
+                  >Eur</span
+                >
+              </th>
+              <td class="buyRate">124.44</td>
+              <td class="sellRate">132.14</td>
+            </tr>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/gbp.webp" alt="gbp-flag" /><span
+                  >Gbp</span
+                >
+              </th>
+              <td class="buyRate">138.28</td>
+              <td class="sellRate">148.46</td>
+            </tr>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/cny.webp" alt="cny-flag" /><span
+                  >Cny</span
+                >
+              </th>
+              <td class="buyRate">15.52</td>
+              <td class="sellRate">17.10</td>
+            </tr>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/php.webp" alt="php-flag" /><span
+                  >Php</span
+                >
+              </th>
+              <td class="buyRate">1.973</td>
+              <td class="sellRate">2.326</td>
+            </tr>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/thb.webp" alt="thb-flag" /><span
+                  >Thb</span
+                >
+              </th>
+              <td class="buyRate">3.18</td>
+              <td class="sellRate">3.63</td>
+            </tr>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/cad.webp" alt="cad-flag" /><span
+                  >Cad</span
+                >
+              </th>
+              <td class="buyRate">79.74</td>
+              <td class="sellRate">89.59</td>
+            </tr>
+            <tr>
+              <th class="currencies">
+                <img src="css/img/flags/sgd.webp" alt="sgd-flag" /><span
+                  >Sgd</span
+                >
+              </th>
+              <td class="buyRate">74.63</td>
+              <td class="sellRate">84.29</td>
+            </tr>
+          </tbody>
+        </table>
+        <div class="container text-center">
+          <a class="heading-sub-ss" href="https://www.exchangerate-api.com"
+            >Rates By Exchange Rate API</a
+          >
+          <p class="heading-sub-ss">*Rates as of <span>June 2022</span> UTC</p>
+          <a href="#" class="link table-link">Find out more &rarr;</a>
         </div>
-        <div class="testimonial-cards-ctn delay--2">
-          <figure class="testimonial-cards">
+      </section>
+
+      <section class="section-register" id="register">
+        <div class="container register-grid">
+          <div class="register-text-box">
+            <h2 class="heading-secondary">Start sending money now</h2>
+            <p class="heading-sub-sm">
+              Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do
+              eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut
+              enim ad minim veniam, quis nostrud.
+            </p>
+            <form action="#" class="register-form">
+              <div>
+                <label for="full-name" class="register-label">Full Name</label>
+                <input
+                  class="register-input"
+                  type="text"
+                  placeholder="Mark Williams"
+                  required
+                />
+              </div>
+              <div>
+                <label for="email" class="register-label">Email Address</label>
+                <input
+                  class="register-input"
+                  type="text"
+                  placeholder="markwilliams@example.com"
+                  required
+                />
+              </div>
+              <button class="btn btn-cta">Join us!</button>
+              <button class="btn btn-log">Log in</button>
+            </form>
+          </div>
+          <div class="img-ctn" role="img"></div>
+        </div>
+      </section>
+
+      <section class="section-testimonial">
+        <div class="container text-center">
+          <h2 class="heading-secondary">Recommended by verified users!</h2>
+        </div>
+        <div class="container grid grid-2-columns">
+          <div class="testimonial-cards-ctn delay--1">
+            <figure class="testimonial-cards">
               <div class="testimonial-flex">
-                <img class="testimonial-img" src="css/img/testimonial/cindy.webp" alt="customer-img">
+                <img
+                  class="testimonial-img"
+                  src="css/img/testimonial/charles.webp"
+                  alt="customer-img"
+                />
                 <div class="rating-ctn">
                   <ion-icon class="star" name="star"></ion-icon>
                   <ion-icon class="star" name="star"></ion-icon>
@@ -247,16 +376,48 @@
                   <ion-icon class="star" name="star"></ion-icon>
                 </div>
               </div>
-            <blockquote class="testimonial-quote">
-              "Risus sed vulputate odio ut. Tincidunt arcu non sodales neque. Tristique senectus et netus et malesuada. Semper risus in hendrerit gravida rutrum quisque. Velit euismod in pellentesque massa."
-            </blockquote>
-            <p class="testimonial-name">- Cindy Richards</p>
-          </figure>
-        </div>
-        <div class="testimonial-cards-ctn delay--3">
-          <figure class="testimonial-cards">
+              <blockquote class="testimonial-quote">
+                "Duis aute irure dolor in reprehenderit in voluptate velit esse
+                cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat
+                cupidatat non proident, sunt in culpa qui officia deserunt
+                mollit anim id est laborum."
+              </blockquote>
+              <p class="testimonial-name">- Charles Evans</p>
+            </figure>
+          </div>
+          <div class="testimonial-cards-ctn delay--2">
+            <figure class="testimonial-cards">
               <div class="testimonial-flex">
-                <img class="testimonial-img" src="css/img/testimonial/ian.webp" alt="customer-img">
+                <img
+                  class="testimonial-img"
+                  src="css/img/testimonial/cindy.webp"
+                  alt="customer-img"
+                />
+                <div class="rating-ctn">
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                </div>
+              </div>
+              <blockquote class="testimonial-quote">
+                "Risus sed vulputate odio ut. Tincidunt arcu non sodales neque.
+                Tristique senectus et netus et malesuada. Semper risus in
+                hendrerit gravida rutrum quisque. Velit euismod in pellentesque
+                massa."
+              </blockquote>
+              <p class="testimonial-name">- Cindy Richards</p>
+            </figure>
+          </div>
+          <div class="testimonial-cards-ctn delay--3">
+            <figure class="testimonial-cards">
+              <div class="testimonial-flex">
+                <img
+                  class="testimonial-img"
+                  src="css/img/testimonial/ian.webp"
+                  alt="customer-img"
+                />
                 <div class="rating-ctn">
                   <ion-icon class="star" name="star"></ion-icon>
                   <ion-icon class="star" name="star"></ion-icon>
@@ -265,92 +426,110 @@
                   <ion-icon class="star" name="star-half"></ion-icon>
                 </div>
               </div>
-            <blockquote class="testimonial-quote">
-              "Rutrum quisque non tellus orci. Sit amet nulla facilisi morbi tempus iaculis urna id volutpat. Iaculis urna id volutpat lacus. Gravida cum sociis natoque penatibus et magnis dis parturient. Turpis massa tincidunt dui ut ornare lectus
-              sit."
-            </blockquote>
-            <p class="testimonial-name">- Ian Ford</p>
-          </figure>
-        </div>
-        <div class="testimonial-cards-ctn delay--4">
-          <figure class="testimonial-cards">
-            <div class="testimonial-flex">
-              <img class="testimonial-img" src="css/img/testimonial/toa.webp" alt="customer-img">
-              <div class="rating-ctn">
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
-                <ion-icon class="star" name="star"></ion-icon>
+              <blockquote class="testimonial-quote">
+                "Rutrum quisque non tellus orci. Sit amet nulla facilisi morbi
+                tempus iaculis urna id volutpat. Iaculis urna id volutpat lacus.
+                Gravida cum sociis natoque penatibus et magnis dis parturient.
+                Turpis massa tincidunt dui ut ornare lectus sit."
+              </blockquote>
+              <p class="testimonial-name">- Ian Ford</p>
+            </figure>
+          </div>
+          <div class="testimonial-cards-ctn delay--4">
+            <figure class="testimonial-cards">
+              <div class="testimonial-flex">
+                <img
+                  class="testimonial-img"
+                  src="css/img/testimonial/toa.webp"
+                  alt="customer-img"
+                />
+                <div class="rating-ctn">
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                  <ion-icon class="star" name="star"></ion-icon>
+                </div>
               </div>
+              <blockquote class="testimonial-quote">
+                "Facilisi morbi tempus iaculis urna id volutpat lacus laoreet
+                non. Enim facilisis gravida neque convallis a cras semper auctor
+                neque. Amet consectetur adipiscing elit pellentesque habitant
+                morbi tristique senectus."
+              </blockquote>
+              <p class="testimonial-name">- Toa Dennings</p>
+            </figure>
+          </div>
+        </div>
+        <div class="container text-center">
+          <a href="#" class="link">Find out more &rarr;</a>
+        </div>
+      </section>
+    </main>
+    <footer class="footer">
+      <div class="container">
+        <div class="footer-text-ctn">
+          <div class="footer-logos-ctn">
+            <a href="#">
+              <img src="css/img/logo.webp" alt="logo-img" class="footer-logo" />
+            </a>
+            <div class="footer-icon-ctn">
+              <a href="#">
+                <ion-icon class="footer-icons" name="logo-instagram"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon class="footer-icons" name="logo-facebook"></ion-icon>
+              </a>
+              <a href="#">
+                <ion-icon class="footer-icons" name="logo-twitter"></ion-icon>
+              </a>
             </div>
-            <blockquote class="testimonial-quote">
-              "Facilisi morbi tempus iaculis urna id volutpat lacus laoreet non. Enim facilisis gravida neque convallis a cras semper auctor neque. Amet consectetur adipiscing elit pellentesque habitant morbi tristique senectus."
-            </blockquote>
-            <p class="testimonial-name">- Toa Dennings</p>
-          </figure>
-        </div>
-      </div>
-      <div class="container text-center">
-        <a href="#" class="link">Find out more &rarr;</a>
-      </div>
-    </section>
-  </main>
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-text-ctn">
-        <div class="footer-logos-ctn">
-          <a href="#">
-            <img src="css/img/logo.webp" alt="logo-img" class="footer-logo">
-          </a>
-          <div class="footer-icon-ctn">
-            <a href="#">
-              <ion-icon class="footer-icons" name="logo-instagram"></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon class="footer-icons" name="logo-facebook"></ion-icon>
-            </a>
-            <a href="#">
-              <ion-icon class="footer-icons" name="logo-twitter"></ion-icon>
-            </a>
+            <p class="copyright">
+              &copy; <span class="copyrightYear">2022</span> by Nippon Exchange,
+              Inc. All Rights Reserved.
+            </p>
           </div>
-          <p class="copyright">
-            &copy; <span class="copyrightYear">2022</span> by Nippon Exchange, Inc. All Rights Reserved.
-          </p>
-        </div>
-        <div class="footer-textbox-ctn">
-          <div class="footer-textbox">
-            <p class="footer-title">Company</p>
-            <ul class="footer-list">
-              <li><a href="#" class="footer-link">About Nippon-Exchange</a></li>
-              <li><a href="#" class="footer-link">News</a></li>
-              <li><a href="#" class="footer-link">Business</a></li>
-              <li><a href="#" class="footer-link">Careers</a></li>
-            </ul>
-          </div>
-          <div class="footer-textbox">
-            <p class="footer-title">Help and support</p>
-            <ul class="footer-list">
-              <li><a href="#" class="footer-link">Contact</a></li>
-              <li><a href="#" class="footer-link">Help center</a></li>
-              <li><a href="#" class="footer-link">Privacy and terms</a></li>
-            </ul>
-          </div>
-          <div class="footer-textbox">
-            <p class="footer-title">Learn more</p>
-            <ul class="footer-list">
-              <li><a href="#" class="footer-link">Currency converter</a></li>
-              <li><a href="#" class="footer-link">Send money</a></li>
-              <li><a href="#" class="footer-link">Daily rates</a></li>
-              <li><a href="#" class="footer-link">Disclaimer</a></li>
-            </ul>
+          <div class="footer-textbox-ctn">
+            <div class="footer-textbox">
+              <p class="footer-title">Company</p>
+              <ul class="footer-list">
+                <li>
+                  <a href="#" class="footer-link">About Nippon-Exchange</a>
+                </li>
+                <li><a href="#" class="footer-link">News</a></li>
+                <li><a href="#" class="footer-link">Business</a></li>
+                <li><a href="#" class="footer-link">Careers</a></li>
+              </ul>
+            </div>
+            <div class="footer-textbox">
+              <p class="footer-title">Help and support</p>
+              <ul class="footer-list">
+                <li><a href="#" class="footer-link">Contact</a></li>
+                <li><a href="#" class="footer-link">Help center</a></li>
+                <li><a href="#" class="footer-link">Privacy and terms</a></li>
+              </ul>
+            </div>
+            <div class="footer-textbox">
+              <p class="footer-title">Learn more</p>
+              <ul class="footer-list">
+                <li><a href="#" class="footer-link">Currency converter</a></li>
+                <li><a href="#" class="footer-link">Send money</a></li>
+                <li><a href="#" class="footer-link">Daily rates</a></li>
+                <li><a href="#" class="footer-link">Disclaimer</a></li>
+              </ul>
+            </div>
           </div>
         </div>
       </div>
-    </div>
-  </footer>
-  <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
-  <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
-  <script src="script.js" charset="utf-8"></script>
-</body>
+    </footer>
+    <script
+      type="module"
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"
+    ></script>
+    <script
+      nomodule
+      src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
+    ></script>
+    <script src="script.js" charset="utf-8"></script>
+  </body>
 </html>

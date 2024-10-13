@@ -44,7 +44,7 @@ html {
 
 body {
   color: #212121;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-weight: 400;
   line-height: 1;
   padding: 3rem;
@@ -113,7 +113,7 @@ Reusable Text Style
 .heading-sub-ss {
   font-size: 1.4rem;
   font-weight: 400;
-  color: #9D9D9D;
+  color: #9d9d9d;
   line-height: 1.6;
   letter-spacing: 1.5px;
 }
@@ -132,8 +132,8 @@ Reusable Buttons
   font-size: 1.8rem;
   font-weight: 700;
   border: none;
-  border-radius: .5rem;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   padding: 1.2rem;
   cursor: pointer;
 }
@@ -171,7 +171,7 @@ Reusable Buttons
   text-decoration: none;
   border-bottom: 2px solid #212121;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .link:hover,
@@ -188,10 +188,11 @@ Main Nav-bar Styles
   justify-content: space-between;
   align-items: flex-start;
   padding-left: 4.5rem;
+  height: 20%;
 }
 
 .logo-img {
-  height: 12.8rem;
+  height: 6rem;
   margin-top: 2rem;
   animation: show 2s linear;
 }
@@ -212,17 +213,17 @@ Main Nav-bar Styles
 .hidden-nav-link:link,
 .hidden-nav-link:visited {
   color: #212121;
-  font-family: 'Rubik', sans-serif;
+  font-family: "Rubik", sans-serif;
   font-size: 2rem;
   font-weight: 600;
   text-decoration: none;
-  transition: all .3s;
+  transition: all 0.3s;
   animation: show 1s linear;
 }
 
 .main-nav-link:hover,
 .main-nav-link:active {
-  border-bottom: .5rem solid #F6D7A7;
+  border-bottom: 0.5rem solid #f6d7a7;
 }
 
 /* burger/mobile navigation */
@@ -239,7 +240,7 @@ Main Nav-bar Styles
 
 .hidden-nav-link:hover,
 .hidden-nav-link:active {
-  border-bottom: .3rem solid #000;
+  border-bottom: 0.3rem solid #000;
 }
 
 .hidden-nav-item {
@@ -267,9 +268,11 @@ Header Styles
 *******************/
 .header {
   height: 95vh;
-  background-image: linear-gradient(rgba(250, 250, 250, 0.8) 0%,
+  background-image: linear-gradient(
+      rgba(250, 250, 250, 0.8) 0%,
       rgba(255, 243, 204, 0.8) 50%,
-      rgba(255, 230, 153, 0.8) 100%),
+      rgba(255, 230, 153, 0.8) 100%
+    ),
     url(../css/img/tokyo.webp);
   background-size: cover;
 }
@@ -279,16 +282,15 @@ Header Styles
   padding: 3.2rem;
   grid-template-columns: 1fr 1fr;
   grid-column-gap: 9.6rem;
-  /* margin-top: 9.6rem; */
-  margin: 12.8rem auto;
-  animation: moveUp .8s ease-in;
+  /* margin: 12.8rem auto; */
+  animation: moveUp 0.8s ease-in;
 }
 
 .converter-ctn {
-  background-color: rgba(250, 250, 250, .8);
+  background-color: rgba(250, 250, 250, 0.8);
   padding: 3.2rem;
-  border-radius: .5rem;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+  border-radius: 0.5rem;
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
 }
 
 .converter-label {
@@ -302,7 +304,7 @@ Header Styles
 .converter-input {
   font-size: 1.8rem;
   border: 1px solid #c4c4c4;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1.2rem;
 }
 
@@ -326,7 +328,7 @@ Header Styles
   position: relative;
   width: 21.3rem;
   border: 1px solid #c4c4c4;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   background-color: #fff;
   padding: 1.3rem;
   cursor: pointer;
@@ -337,7 +339,7 @@ Header Styles
 }
 
 .jpy {
-  color: #9D9D9D;
+  color: #9d9d9d;
 }
 
 .dropdown-icon {
@@ -353,10 +355,10 @@ Header Styles
   width: 21rem;
   list-style: none;
   background-color: #fff;
-  border-radius: .5rem;
-  margin-top: .3rem;
+  border-radius: 0.5rem;
+  margin-top: 0.3rem;
   padding: 1rem;
-  box-shadow: 0 1rem 4rem rgba(0, 17, 51, .1);
+  box-shadow: 0 1rem 4rem rgba(0, 17, 51, 0.1);
   position: absolute;
   z-index: 1;
   overflow-y: scroll;
@@ -398,12 +400,12 @@ Header Styles
   font-weight: 700;
   color: #fff;
   background-color: #212121;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, .1);
+  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.1);
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   padding: 1.2rem;
   cursor: pointer;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .convert-btn:hover,
@@ -427,7 +429,7 @@ Features Styles
 
 .features-icon {
   height: 7.4rem;
-  background-color: #FFE699;
+  background-color: #ffe699;
   stroke: #212121;
   padding: 1rem;
   border-radius: 50%;
@@ -445,7 +447,7 @@ Table Styles
 .table {
   width: 80rem;
   border-collapse: collapse;
-  animation: moveUp .8s ease-in;
+  animation: moveUp 0.8s ease-in;
 }
 
 .currencies {
@@ -464,7 +466,7 @@ Table Styles
 }
 
 thead tr {
-  background-color: #FFE699;
+  background-color: #ffe699;
 }
 
 .table-head tr th {
@@ -496,7 +498,7 @@ tbody tr:nth-child(even) {
 Register Styles
 *******************/
 .section-register {
-  background-color: #FFE699;
+  background-color: #ffe699;
   margin: 3.2rem 0 9.6rem 0;
 }
 
@@ -528,19 +530,21 @@ Register Styles
 .register-input {
   width: 100%;
   border: none;
-  border-radius: .5rem;
+  border-radius: 0.5rem;
   font-size: 1.8rem;
   padding: 1.2rem;
 }
 
 .img-ctn {
-  background-image: linear-gradient(to right bottom,
+  background-image: linear-gradient(
+      to right bottom,
       rgba(255, 243, 204, 0.3),
-      rgba(255, 230, 153, 0.5)),
+      rgba(255, 230, 153, 0.5)
+    ),
     url(../css/img/send.webp);
   background-size: cover;
-    background-position: center;
-  border-radius: .5rem;
+  background-position: center;
+  border-radius: 0.5rem;
 }
 
 /******************
@@ -551,15 +555,17 @@ Testimonial Styles
 }
 
 .testimonial-cards-ctn {
-  background-image: linear-gradient(rgba(255, 243, 204, 0.5),
-      rgba(255, 230, 153, 0.5));
+  background-image: linear-gradient(
+    rgba(255, 243, 204, 0.5),
+    rgba(255, 230, 153, 0.5)
+  );
   transform: skewX(-10deg);
   animation: show 2s ease;
-  transition: all .3s;
+  transition: all 0.3s;
 }
 
 .testimonial-cards-ctn:hover {
-  transform: skewX(-10deg) translateY(-.5rem);
+  transform: skewX(-10deg) translateY(-0.5rem);
 }
 
 .testimonial-cards {
@@ -588,13 +594,13 @@ Testimonial Styles
 
 .testimonial-name {
   font-size: 1.6rem;
-  color: #9D9D9D;
+  color: #9d9d9d;
 }
 
 .star {
   height: 3rem;
   width: 3rem;
-  color: #FF6363;
+  color: #ff6363;
 }
 
 /******************
@@ -620,7 +626,7 @@ Footer Styles
 
 .copyright {
   font-size: 1.4rem;
-  color: #9D9D9D;
+  color: #9d9d9d;
 }
 
 .footer-icons {
@@ -662,7 +668,7 @@ Footer Styles
   display: inline-block;
   font-size: 1.6rem;
   font-weight: 500;
-  color: #9D9D9D;
+  color: #9d9d9d;
   text-decoration: none;
   margin-bottom: 1.6rem;
 }
@@ -708,14 +714,13 @@ Footer Styles
   }
 
   50% {
-    opacity: .5;
+    opacity: 0.5;
   }
 
   100% {
     opacity: 1;
   }
 }
-
 
 /******************
 Animation delay
@@ -746,7 +751,7 @@ Below 1330px
 @media (max-width: 83em) {
   .header-grid {
     grid-column-gap: 3.2rem;
-    margin: 6.4rem auto 0;
+    /* margin: 6.4rem auto 0; */
   }
 
   .heading-primary {
@@ -788,7 +793,7 @@ Below 1150px
   }
 
   .converter-flex {
-    gap: .5rem;
+    gap: 0.5rem;
     /* margin: 3.2rem; */
   }
 
@@ -819,7 +824,7 @@ Below 970px
 
   .header-grid {
     grid-template-columns: 1fr;
-    grid-row-gap: 9.6rem;
+    grid-row-gap: 1.6rem;
     text-align: center;
   }
 
@@ -829,10 +834,10 @@ Below 970px
     padding: 3.6rem 2.4rem;
   }
 
-  .default-ctn, .dropdown-list {
+  .default-ctn,
+  .dropdown-list {
     text-align: left;
   }
-
 }
 
 /******************
@@ -843,8 +848,16 @@ Below 822px
     padding: 0;
   }
 
+  .main-nav {
+    height: 50px;
+  }
+
+  .header {
+    padding: 1rem;
+  }
+
   .header-grid {
-    margin: 4.8rem auto 0;
+    margin: 2rem auto 0;
   }
 
   .grid-4-columns,
@@ -887,7 +900,7 @@ Below 822px
 
   .testimonial-cards-ctn {
     width: 80%;
-    margin: 0 auto
+    margin: 0 auto;
   }
 
   .footer-logos-ctn {
@@ -895,7 +908,6 @@ Below 822px
     gap: 4.8rem;
     align-items: center;
   }
-
 }
 
 /******************
@@ -968,10 +980,9 @@ Below 619px
 Below 370px
 *******************/
 @media (max-width: 25em) {
-
   .header-grid {
     grid-column-gap: 1.6rem;
-    margin: 2rem auto;
+    margin: 5rem auto;
     padding: 0;
   }
 
@@ -980,10 +991,10 @@ Below 370px
   }
 
   .converter-flex {
-    gap: .5rem;
+    gap: 0.5rem;
   }
 
-  .converter-label  {
+  .converter-label {
     font-size: 1.2rem;
   }
 
@@ -991,7 +1002,9 @@ Below 370px
     grid-column-gap: 3.2rem;
   }
 
-  .footer, .section-table, .section-features {
+  .footer,
+  .section-table,
+  .section-features {
     padding: 6.4rem 0 3.2rem;
   }
 }
@@ -1011,7 +1024,7 @@ Below 345px
   .converter-input,
   .default-ctn {
     font-size: 1.2rem;
-    padding: .8rem;
+    padding: 0.8rem;
   }
 
   .default-ctn {
@@ -1061,6 +1074,6 @@ Below 345px
   .footer-link:link,
   .footer-link:visited {
     font-size: 1.2rem;
-    font-weight: 400
+    font-weight: 400;
   }
 }

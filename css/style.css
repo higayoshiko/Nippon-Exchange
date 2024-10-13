@@ -192,7 +192,7 @@ Main Nav-bar Styles
 }
 
 .logo-img {
-  height: 6rem;
+  height: 6rem !important;
   margin-top: 2rem;
   animation: show 2s linear;
 }
